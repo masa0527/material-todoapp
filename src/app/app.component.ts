@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { todoList } from './todo-list';
+import { Todo } from './todo';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Material-TodoApp';
+  todoList = todoList;
+
+  addTodo(todo: Todo) {
+    this.todoList.unshift(todo);
+  }
 }

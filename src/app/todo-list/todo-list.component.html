@@ -1,0 +1,8 @@
+<md-list>
+  <md-list-item *ngFor="let todo of todoList" [class.completed]="todo.completed">
+    <label>
+      <md-checkbox [(ngModel)]="todo.completed"></md-checkbox>
+      {{ todo.title}}
+    </label>
+  </md-list-item>
+</md-list>
